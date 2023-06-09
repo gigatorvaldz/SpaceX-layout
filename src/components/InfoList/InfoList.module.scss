@@ -186,6 +186,7 @@
         width: 100%;
         &:not(:first-child) {
           margin-left: 0px;
+          margin-top: 5px;
         }
         .inneritem {
           padding: 10px;
