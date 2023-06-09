@@ -1,0 +1,168 @@
+.container {
+  cursor: pointer;
+  position: relative;
+  z-index: 11;
+  transition: 1s ease-in-out;
+
+  &:hover {
+    animation: swing 20s infinite ease-in-out;
+  }
+
+  @keyframes swing {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(5deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  width: max-content;
+  padding: 10px 25px;
+  border: 1px solid transparent;
+  border-image: rgb(38, 62, 102);
+  border-image: linear-gradient(
+    30deg,
+    rgba(38, 62, 102, 1) 0%,
+    rgba(9, 33, 61, 1) 30%,
+    rgba(9, 33, 61, 0) 50%,
+    rgba(9, 33, 61, 1) 70%,
+    rgba(38, 62, 102, 1) 100%
+  );
+  border-image-slice: 1;
+
+  p {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    -webkit-text-fill-color: #fff;
+  }
+
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: -7px;
+    width: 15px;
+    height: 15px;
+    background-image: url("../../../../public/img/blik.png");
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: -7px;
+    transform: rotate(180deg);
+    width: 15px;
+    height: 15px;
+    background-image: url("../../../../public/img/blik.png");
+  }
+
+  animation: rotateGradient 5s infinite linear;
+  border: 1px solid transparent;
+  border-image: linear-gradient(
+    30deg,
+    rgba(38, 62, 102, 1) 0%,
+    rgba(9, 33, 61, 1) 30%,
+    rgba(9, 33, 61, 0) 50%,
+    rgba(9, 33, 61, 1) 70%,
+    rgba(38, 62, 102, 1) 100%
+  );
+  border-image-slice: 1;
+}
+
+@keyframes rotateGradient {
+  0% {
+    border-image-source: linear-gradient(
+      0deg,
+      rgba(38, 62, 102, 1) 0%,
+      rgba(9, 33, 61, 1) 30%,
+      rgba(9, 33, 61, 0) 50%,
+      rgba(9, 33, 61, 1) 70%,
+      rgba(38, 62, 102, 1) 100%
+    );
+  }
+
+  20% {
+    border-image-source: linear-gradient(
+      72deg,
+      rgba(38, 62, 102, 1) 0%,
+      rgba(9, 33, 61, 1) 30%,
+      rgba(9, 33, 61, 0) 50%,
+      rgba(9, 33, 61, 1) 70%,
+      rgba(38, 62, 102, 1) 100%
+    );
+  }
+
+  40% {
+    border-image-source: linear-gradient(
+      144deg,
+      rgba(38, 62, 102, 1) 0%,
+      rgba(9, 33, 61, 1) 30%,
+      rgba(9, 33, 61, 0) 50%,
+      rgba(9, 33, 61, 1) 70%,
+      rgba(38, 62, 102, 1) 100%
+    );
+  }
+
+  60% {
+    border-image-source: linear-gradient(
+      216deg,
+      rgba(38, 62, 102, 1) 0%,
+      rgba(9, 33, 61, 1) 30%,
+      rgba(9, 33, 61, 0) 50%,
+      rgba(9, 33, 61, 1) 70%,
+      rgba(38, 62, 102, 1) 100%
+    );
+  }
+
+  80% {
+    border-image-source: linear-gradient(
+      288deg,
+      rgba(38, 62, 102, 1) 0%,
+      rgba(9, 33, 61, 1) 30%,
+      rgba(9, 33, 61, 0) 50%,
+      rgba(9, 33, 61, 1) 70%,
+      rgba(38, 62, 102, 1) 100%
+    );
+  }
+
+  100% {
+    border-image-source: linear-gradient(
+      360deg,
+      rgba(38, 62, 102, 1) 0%,
+      rgba(9, 33, 61, 1) 30%,
+      rgba(9, 33, 61, 0) 50%,
+      rgba(9, 33, 61, 1) 70%,
+      rgba(38, 62, 102, 1) 100%
+    );
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    p {
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .container {
+    p {
+      font-size: 16px;
+    }
+  }
+}

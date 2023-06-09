@@ -1,0 +1,124 @@
+.container {
+  background-image: url("../../public/img/background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 660px;
+  width: 100%;
+  position: relative;
+  font-family: "MuseoSansCyrl-500";
+
+  &::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background-image: url("../../public/img/line.png"),
+      url("../../public/img/onlyplanet.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 660px;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .content {
+    display: flex;
+    margin-top: 110px;
+
+    .tagline {
+      display: inline-flex;
+      flex-direction: column;
+      background: #fff;
+      background: linear-gradient(to right, #fff 0%, #ff3f04 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      & > * {
+        display: inline-block;
+      }
+      h1 {
+        font-size: 58px;
+      }
+      h2 {
+        font-size: 25px;
+      }
+
+      .taglinebtn {
+        margin-top: 60px;
+      }
+    }
+
+    .info {
+      margin-left: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    &::before {
+      display: none;
+    }
+
+    .content {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0px;
+
+      .tagline {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .info{
+        margin-left: 0px;
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .container {
+    .content {
+
+      .tagline {
+        h1 {
+          font-size: 40px;
+        }
+        h2 {
+          font-size: 20px;
+        }
+        .taglinebtn {
+          margin-top: 30px;
+        }
+  
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 330px) {
+  .container {
+    .content {
+
+      .tagline {
+        h1 {
+          font-size: 30px;
+        }
+        h2 {
+          font-size: 14px;
+        }
+        .taglinebtn {
+          margin-top: 30px;
+        }
+  
+      }
+    }
+  }
+}
