@@ -26,9 +26,10 @@
 
   .content {
     display: flex;
-    margin-top: 110px;
+    justify-content: space-between;
 
     .tagline {
+      margin-top: 105px;
       display: inline-flex;
       flex-direction: column;
       background: #fff;
@@ -40,18 +41,21 @@
       }
       h1 {
         font-size: 58px;
+        font-family: "MuseoSansCyrl-700";
       }
       h2 {
         font-size: 25px;
+        font-family: "MuseoSansCyrl-300";
+        line-height: 12px;
       }
 
       .taglinebtn {
-        margin-top: 60px;
+        margin-top: 94px;
       }
     }
 
     .info {
-      margin-left: auto;
+      margin-top: 42px;
     }
   }
 }
@@ -74,7 +78,7 @@
         align-items: center;
       }
 
-      .info{
+      .info {
         margin-left: 0px;
         margin-top: 40px;
       }
@@ -85,7 +89,6 @@
 @media screen and (max-width: 470px) {
   .container {
     .content {
-
       .tagline {
         h1 {
           font-size: 40px;
@@ -96,17 +99,14 @@
         .taglinebtn {
           margin-top: 30px;
         }
-  
       }
     }
   }
 }
 
-
 @media screen and (max-width: 330px) {
   .container {
     .content {
-
       .tagline {
         h1 {
           font-size: 30px;
@@ -117,7 +117,6 @@
         .taglinebtn {
           margin-top: 30px;
         }
-  
       }
     }
   }

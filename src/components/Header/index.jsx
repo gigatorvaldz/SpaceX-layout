@@ -35,7 +35,7 @@ const Header = () => {
             <LinkButton href={void(0)}>Гарантии</LinkButton>
           </li>
           <li>
-            <LinkButton href={void(0)}>О компании</LinkButton>
+            <LinkButton href={void(0)}>О компаии</LinkButton>
           </li>
           <li>
             <LinkButton href={void(0)}>Контакты</LinkButton>

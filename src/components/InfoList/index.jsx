@@ -32,7 +32,7 @@ const InfoList = ({ items }) => {
             className={classNames(css.inneritem, css["inneritem-third"])}
           >
             <span>календарик за</span>
-            <h2>2001г.</h2>
+            <h2>2001 <span className={css.smaller}>г.</span></h2>
             <span>в подарок</span>
           </a>
         </li>
